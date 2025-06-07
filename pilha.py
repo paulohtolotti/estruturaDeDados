@@ -35,6 +35,24 @@ class Stack:
             self.head = self.head.next
         print("NULL")
 
+    def pop(self):
+        '''Remove o topo'''
+        if self.head is None:
+            print("Pilha vazia")
+            return
+        aux = self.head
+        self.head = self.head.next
+        del(aux)
+        self.size -= 1
+
+    def peek(self):
+        '''Exibe o valor do elemento do topo'''
+        return self.head.key
+    
+    def sizeOf(self):
+        '''Exibe o tamanho da pilha'''
+        return self.size
+    
 
 
 pilha = Stack()
@@ -42,6 +60,7 @@ pilha.insert(15)
 pilha.insert(20)
 pilha.insert(30)
 pilha.show()
+
 
 
 
