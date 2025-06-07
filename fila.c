@@ -38,9 +38,18 @@ void showQueue(){
 	}
 	printf("NULL\n\n");
 }
+
+void peek(){
+	if (head == NULL) {
+		printf("NULL");
+		return;
+	}
+	printf("Peek: %i\n\n", head->key);
+}
 int main(){
 	head = NULL;	//Inicializa a fila vazia
 	insert(3); insert(1); insert(4); insert(1); insert(5);
-	showQueue(); dequeue(); showQueue(); dequeue(); dequeue(); dequeue(); dequeue();
+	showQueue(); dequeue(); peek();
+	showQueue(); dequeue(); peek(); dequeue(); dequeue(); dequeue();
 	showQueue();
 };
