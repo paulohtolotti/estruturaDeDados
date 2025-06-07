@@ -20,6 +20,16 @@ void insert(int val) {
 	tail = newMember;
 }
 
+void dequeue(){
+	if (head == NULL) {
+		printf("Fila vazia");
+		return;
+	}
+	aux = head;
+	head = head->next;
+	free(aux);
+	
+}
 void showQueue(){
 	aux = head;
 	while (aux != NULL){
@@ -31,5 +41,6 @@ void showQueue(){
 int main(){
 	head = NULL;	//Inicializa a fila vazia
 	insert(3); insert(1); insert(4); insert(1); insert(5);
+	showQueue(); dequeue(); showQueue(); dequeue(); dequeue(); dequeue(); dequeue();
 	showQueue();
 };
